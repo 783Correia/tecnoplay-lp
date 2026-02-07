@@ -65,12 +65,12 @@ export function PricingSection() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-center max-w-lg mx-auto lg:max-w-none">
                         {plans.map((plan, index) => (
                             <div
                                 key={index}
-                                className={`relative p-8 rounded-3xl border transition-all duration-300 ${plan.highlight
-                                    ? "bg-[#00aaff]/10 border-[#00aaff] scale-105 shadow-[0_0_40px_rgba(0,170,255,0.15)] z-10"
+                                className={`relative p-6 md:p-8 rounded-3xl border transition-all duration-300 w-full ${plan.highlight
+                                    ? "bg-[#00aaff]/10 border-[#00aaff] lg:scale-105 shadow-[0_0_40px_rgba(0,170,255,0.15)] z-10"
                                     : "bg-white/5 border-white/5 hover:border-white/20"
                                     }`}
                             >
