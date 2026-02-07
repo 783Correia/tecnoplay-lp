@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Preloader } from "@/components/Preloader";
+import { SmoothScroll } from "@/components/smooth-scroll";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -18,12 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body
         className={`${montserrat.variable} antialiased bg-[#050a12] text-white`}
       >
-        {children}
+        <SmoothScroll>
+          <ScrollToTop />
+          <Preloader />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );
 }
+

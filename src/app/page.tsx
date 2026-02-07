@@ -3,6 +3,7 @@ import { VideoSection } from "@/components/VideoSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { PricingSection } from "@/components/PricingSection";
 import { StepsSection } from "@/components/StepsSection";
+import { FAQSection } from "@/components/FAQSection";
 import { ResellerCTA } from "@/components/ResellerCTA";
 import { Footer } from "@/components/Footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <BenefitsSection />
       <PricingSection />
       <StepsSection />
+      <FAQSection />
       <ResellerCTA />
       <Footer />
     </main>

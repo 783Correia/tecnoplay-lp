@@ -1,12 +1,21 @@
+"use client";
+
 import { Header } from "./Header";
 import { Button } from "./ui/Button";
+import { DottedSurface } from "./ui/dotted-surface";
 import { Play, Tv, Smartphone, Cast, Monitor } from "lucide-react";
 
 export function HeroSection() {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050a12] pt-20">
+        <section id="inicio" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#050a12] pt-24">
+            {/* 3D Dotted Surface Animation */}
+            <div className="absolute inset-0 z-0">
+                <DottedSurface />
+            </div>
+
             {/* Background Effects */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#00aaff]/20 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-[#00aaff]/10 rounded-full blur-[120px] pointer-events-none z-0" />
+
             <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[#ffaa00]/10 rounded-full blur-[100px] pointer-events-none" />
 
             {/* Grid Pattern Overlay */}
@@ -15,7 +24,7 @@ export function HeroSection() {
             <Header />
 
             <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center max-w-5xl mx-auto mt-10 md:mt-0">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#00aaff] text-xs font-bold uppercase tracking-wider mb-6 animate-fade-in-up">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[#00aaff] text-xs font-bold uppercase tracking-wider mb-6">
                     <span className="w-2 h-2 rounded-full bg-[#00aaff] animate-pulse" />
                     O Único Aplicativo Híbrido do Brasil
                 </div>
@@ -30,20 +39,23 @@ export function HeroSection() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center mb-16">
-                    <Button variant="primary" size="lg" className="h-16 px-8 text-lg w-full sm:w-auto shadow-[0_0_30px_rgba(255,170,0,0.4)]">
-                        <Play className="mr-2 fill-current" size={20} />
-                        PRA ACESSAR É MUITO FÁCIL
-                    </Button>
-                    <Button variant="outline" size="lg" className="h-16 px-8 text-lg w-full sm:w-auto">
-                        FALAR NO WHATSAPP
-                    </Button>
+                    <a href="#planos">
+                        <Button variant="primary" size="lg" className="h-16 px-8 text-lg w-full sm:w-auto shadow-[0_0_30px_rgba(255,170,0,0.4)]">
+                            <Play className="mr-2 fill-current" size={20} />
+                            PRA ACESSAR É MUITO FÁCIL
+                        </Button>
+                    </a>
+                    <a href="https://wa.me/5554999335331" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="lg" className="h-16 px-8 text-lg w-full sm:w-auto">
+                            FALAR NO WHATSAPP
+                        </Button>
+                    </a>
                 </div>
 
                 {/* Social Proof / Brands */}
                 <div className="w-full max-w-4xl border-t border-white/10 pt-10">
                     <p className="text-sm text-gray-500 mb-6 font-medium uppercase tracking-widest">Compatível com todos os dispositivos</p>
                     <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                        {/* Using Lucide Icons as placeholders for device compatibility which is stronger than brands usually */}
                         <div className="flex flex-col items-center gap-2">
                             <Tv size={32} className="text-white" />
                             <span className="text-xs text-white">Smart TV</span>
@@ -66,3 +78,4 @@ export function HeroSection() {
         </section>
     );
 }
+
