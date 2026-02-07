@@ -1,10 +1,19 @@
+"use client";
+
 import Link from "next/link";
 
 export function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     return (
         <footer className="py-12 px-6 bg-[#020508] border-t border-white/5">
             <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="flex items-center gap-1">
+                <div
+                    className="flex items-center gap-1 cursor-pointer transition-opacity hover:opacity-80"
+                    onClick={scrollToTop}
+                >
                     <span className="text-xl font-bold tracking-tighter text-[#00aaff]">TECNO</span>
                     <span className="text-xl font-bold tracking-tighter text-[#ffaa00]">PLAY</span>
                 </div>

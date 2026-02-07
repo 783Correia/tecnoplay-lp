@@ -39,7 +39,7 @@ export function HeroSection() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center mb-16">
-                    <a href="#planos">
+                    <a href="#video">
                         <Button variant="primary" size="lg" className="h-16 px-8 text-lg w-full sm:w-auto shadow-[0_0_30px_rgba(255,170,0,0.4)]">
                             <Play className="mr-2 fill-current" size={20} />
                             PRA ACESSAR É MUITO FÁCIL
