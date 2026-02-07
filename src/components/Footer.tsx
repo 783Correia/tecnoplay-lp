@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowUp } from "lucide-react";
 
 export function Footer() {
     const scrollToTop = () => {
@@ -26,6 +27,16 @@ export function Footer() {
                     <Link href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Termos de Uso</Link>
                     <Link href="#" className="text-sm text-gray-500 hover:text-white transition-colors">Privacidade</Link>
                 </div>
+
+                <button
+                    onClick={scrollToTop}
+                    className="flex items-center gap-2 text-gray-400 hover:text-[#00aaff] transition-colors group"
+                >
+                    <span className="text-sm font-medium">Voltar ao topo</span>
+                    <div className="p-2 rounded-full run-bg-white/5 group-hover:bg-[#00aaff]/10 transition-colors">
+                        <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform duration-300" />
+                    </div>
+                </button>
             </div>
         </footer>
     );
